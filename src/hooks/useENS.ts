@@ -1,25 +1,19 @@
-import { isAddress } from "../utils";
-import useENSAddress from "./useENSAddress";
-import useENSName from "./useENSName";
+import { getDefaultProvider } from '@ethersproject/providers';
+import { useEffect, useState } from 'react';
 
-/**
- * Given a name or address, does a lookup to resolve to an address and name
- * @param nameOrAddress ENS name or address
- */
-export default function useENS(
-	nameOrAddress?: string | null
-): { loading: boolean; address: string | null; name: string | null } {
-	const validated = isAddress(nameOrAddress);
-	const reverseLookup = useENSName(validated ? validated : undefined);
-	const lookup = useENSAddress(nameOrAddress);
+export function useENS(address: string | null | undefined) {
+  const [ensName, setENSName] = useState<string | null>();
 
-	return {
-		loading: reverseLookup.loading || lookup.loading,
-		address: validated ? validated : lookup.address,
-		name: reverseLookup.ENSName
-			? reverseLookup.ENSName
-			: !validated && lookup.address
-			? nameOrAddress || null
-			: null,
-	};
+  useEffect(() => {
+    async function resolveENS() {
+      if (address) {
+        const provider = await getDefaultProvider();
+        const name = await provider.lookupAddress(address);
+        if (name) setENSName(name);
+      }
+    }
+    resolveENS();
+  }, [address]);
+
+  return { ensName };
 }
