@@ -1,80 +1,56 @@
-# Introduction
+# Contributing to [Bomb.money](https://bomb.money)
 
-### Welcome Frentacle!
+🎉 First off all, thanks for taking the time to contribute! 🎉
 
-First off, thank you for considering contributing to OctoFi. It's people like you that make OctoFi such a great community.
+Following is a set of guidelines for contributing to the `Bomb.money` website. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes to this document in a pull request.
 
-### Tentacles unite!
+## Code of Conduct
 
-Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open source project. In return, they should reciprocate that respect in addressing your issue, assessing changes, and helping you finalize your pull requests.
+We take our open source community seriously and hold ourselves and other contributors to high standards of communication. By participating and contributing to this project, you agree to uphold our [Code of Conduct](#code-of-conduct).
 
-### We're looking for contributions of all kinds
+## Getting Started
 
-OctoFi is an open source project and we love to receive contributions from our community — you! There are many ways to contribute, from writing tutorials or blog posts, improving the documentation, submitting bug reports and feature requests or writing code which can be incorporated into OctoFi itself.
+Contributions are made to this repo via Issues and Pull Requests (PRs). A few general guidelines that cover both:
 
-### Support questions
+- Search for existing Issues and PRs before creating your own.
+- We work hard to makes sure issues are handled in a timely manner but, depending on the impact, it could take a while to investigate the root cause. A friendly ping in the comment thread to the submitter or a contributor can help draw attention if your issue is blocking.
 
-Please, don't use the issue tracker for this. The issue tracker is a tool to address bugs and feature requests in OctoFi dApp itself. Use the [Den Help Center](https://den.octo.fi/t/support).
+### Issues
 
-# Ground Rules
+Issues should be used to report problems with the website, request a new feature, or to discuss potential changes before a PR is created. Make sure to collect and provide as much information as possible for us to investigate.
 
-Responsibilities
-* Ensure cross-platform compatibility for every change that's accepted. Windows, Mac, Debian & Ubuntu Linux.
-* Create issues for any major changes and enhancements that you wish to make. Discuss things transparently and get community feedback.
-* Keep feature versions as small as possible, preferably one new feature per version.
-* Be welcoming to newcomers and encourage diverse new contributors from all backgrounds.
+If you find an Issue that addresses the problem you're having, please add your own reproduction information to the existing issue rather than creating a new one. Adding a [reaction](https://github.blog/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/) can also help by indicating to our maintainers that a particular problem is affecting more than just the reporter.
 
-# Your First Contribution
+### Pull Requests
 
-Unsure where to begin contributing to OctoFi? You can start by looking through the good-first-issue and help-wanted issues:
-* Good first issue - issues which should only require a few lines of code, and a test or two.
-* Help wanted - issues which should be a bit more involved than good-first-issue issues.
+PRs to our ecosystem are always welcome and can be a quick way to get your fix or improvement included for the next release. In general, PRs should:
 
-Or find small ways to contribute:
-* Spelling / grammar fixes
-* Typo correction, white space and formatting changes
-* Comment clean up
-* Bug fixes that change default return values or error codes stored in constants
-* Adding logging messages or debugging output
-* Changes to ‘metadata’ files like Gemfile, .gitignore, build scripts, etc.
-* Moving source files from one directory or package to another
+- Only fix/add the functionality in question **OR** address wide-spread whitespace/style issues, not both.
+- Address a single concern in the least number of changed lines as possible.
+- Include documentation in the pull request to describe how you solved the issue.
 
-Working on your first Pull Request? You can learn how from this *free* series, [How to Contribute to an Open Source Project on GitHub](https://app.egghead.io/playlists/how-to-contribute-to-an-open-source-project-on-github).
+For major changes (e.g. a major release), it's best to open an Issue to discuss your proposal first. This is not required but can save time creating and reviewing changes.
 
-At this point, you're ready to make your changes! Feel free to ask for help; everyone is a beginner at first :smile_cat:
+In general, we follow the ["fork-and-pull" Git workflow](https://gist.github.com/Chaser324/ce0505fbed06b947d962)
 
-If a maintainer asks you to "rebase" your PR, they're saying that a lot of code has changed, and that you need to update your branch so it's easier to merge.
+1. Fork the repository to your own Github account
+2. Clone the project to your machine
+3. Create a branch locally with a succinct but descriptive name
+4. Commit changes to the branch
+5. Push changes to your fork
+6. Open a PR in our repository and follow the PR template so that we can efficiently review the changes.
 
-# Getting started
+### Submitting changes
 
-For something that is bigger than a one or two line fix:
+Always open a GitHub Pull Request with a clear list of what you've done (read more about [pull requests](http://help.github.com/pull-requests/)). Please follow our coding requirements (below) and make sure all of your commits are atomic (one feature per commit).
 
-1. Create your own fork of the code
-2. Do the changes in your fork
-3. If you like the change and think the project could use it, Send a pull request.
+Always write a clear log message for your commits. One-line messages are fine for small changes, but bigger changes should look like this:
 
-# How to report a bug
+    $ git commit -m "A brief summary of the commit
+    >
+    > A paragraph describing what changed and its impact."
 
-Create a Bug Report in [Issues](https://github.com/OctoFi/octofi-app-aquafarm/issues).
+If you would like to read more about good quality commit titles, check this [article](https://chris.beams.io/posts/git-commit/)
 
-If you find a security vulnerability, do NOT open an issue. Email hello@octo.fi instead.
-In order to determine whether you are dealing with a security issue, ask yourself these two questions:
-* Can I access something that's not mine, or something I shouldn't have access to?
-* Can I disable something for other people?
-
-If the answer to either of those two questions are "yes", then you're probably dealing with a security issue. Note that even if you answer "no" to both questions, you may still be dealing with a security issue, so if you're unsure, just email us at hello@octo.fi
-
-# How to suggest a feature or enhancement
-
-Create a Feature Request in [Issues](https://github.com/OctoFi/octofi-app-aquafarm/issues).
-
-If you find yourself wishing for a feature that doesn't exist in OctoFi dApp, you are probably not alone. There are bound to be others out there with similar needs. Many of the features that OctoFi dApp has today have been added because our users saw the need. Create a Feature Request which describes the feature you would like to see, why you need it, and how it should work.
-
-# Code review process
-
-The core team looks at Pull Requests on a regular basis.
-After feedback has been given we expect responses within two weeks. After two weeks we may close the pull request if it isn't showing any activity.
-
-# Community
-
-You can chat with the community and the Octagon in the [Den](https://den.octo.fi/) or on [Telegram](https://t.me/OctoFi).
+Thank you,
+OGBoogie

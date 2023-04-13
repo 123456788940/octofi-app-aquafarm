@@ -1,5 +1,5 @@
 # Ignore artifacts:
 build
-node_modules
-public
-
+coverage
+# Ignore all HTML files:
+*.html
